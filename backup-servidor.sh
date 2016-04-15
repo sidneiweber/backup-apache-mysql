@@ -2,7 +2,7 @@
 DIA=`date +%A`
 DATA=`date +%d-%m-%Y`
 
-mysqldump -u root -pbolacha catalogo > /tmp/catalogo-"$DIA"-"$DATA".sql
+mysqldump -u root -psenha catalogo > /tmp/catalogo-"$DIA"-"$DATA".sql
 
 # Compactar pasta
 tar -zcvf /home/sidnei/MEGAsync/Branco/catalogo-"$DIA"-"$DATA".tar.gz /var/www/catalogo/ /tmp/catalogo-"$DIA"-"$DATA".sql
